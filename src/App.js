@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import { BasicTable } from './components/BasicTable';
+import { Banks } from './components/banks';
+import tw from "twin.macro";
+
+const AppContainer = tw.div`
+  items-center
+  justify-center
+  pt-6
+  pb-10
+  pl-1
+  pr-1
+`;
+
+const Title = tw.h1`
+  text-2xl
+  font-semibold
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <Title>Bank Search Application</Title>
+      {/* <BasicTable /> */}
+      <Banks />
+    </AppContainer>
   );
 }
 
